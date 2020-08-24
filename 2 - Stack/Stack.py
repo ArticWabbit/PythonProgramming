@@ -1,27 +1,34 @@
-def makeStack():
-    stack = []
-    return stack
+stack = []
 
-def isEmpty(stack):
-    return len(stack) == 0
+while True:
 
-def push(stack, item):
-    stack.append(item)
-    print(item + " pushed to stack ")
+    def isEmpty(stack):
+        return len(stack) == 0
 
-def pop(stack):
-    if (isEmpty(stack)):
-        return str(print("No items in stack"))
 
-    return stack.pop()
+    def push(stack, item):
+        stack.append(item)
+        return print(item + " pushed to stack")
 
-stack = makeStack()
-push(stack, str(10))
-push(stack, str(20))
-push(stack, str(30))
-print(pop(stack) + " popped")
-print(pop(stack) + " popped")
-print(pop(stack) + " popped")
-print(stack)
 
-input("\n#####")
+    def pop(stack):
+        if (isEmpty(stack)):
+            return str(print("Stack is empty\n"))
+
+        else:
+            return stack.pop()
+
+
+    print("Press 1 to push to stack")
+    print("Press 2 to pop stack\n")
+
+    userInput = input("What would you like to do?: ")
+
+    if userInput == "1":
+        item = input("What would you like to push?: ")
+        push(stack, item)
+
+    elif userInput == "2":
+        print(pop(stack) + " popped from stack")
+
+        continue
