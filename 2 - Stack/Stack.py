@@ -8,7 +8,7 @@ while True:
 
     def push(stack, item):
         stack.append(item)
-        return print(item + " pushed to stack")
+        return print(item + " pushed to stack\n")
 
 
     def pop(stack):
