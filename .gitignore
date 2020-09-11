@@ -1,5 +1,6 @@
-/.idea
-/Include
-/Lib
-/Scripts
-pyvenv.cfg
+shelf/
+/workspace.xml
+.idea/
+Lib/
+Scripts/
+*.cfg
